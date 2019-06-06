@@ -1,0 +1,25 @@
+<p>
+  Customer Configuration
+</p>
+<!-- <ul> -->
+  <table>
+    <table border="1"  *ngFor="let Configuration of config$"  cellpadding="1" cellspacing="1" width="600px">
+    <tr>
+      <td style="width: 100px;">
+            {{ Configuration.CustomerID }}
+        </td>
+        
+        <td style="width: 300px;">
+          {{ Configuration.ConfigurationName }}
+        </td>
+        <td style="width: 100px;">
+            {{ Configuration.ConfigurationValue }}
+          </td>
+         <td>
+          <a routerLink="/configdetail/{{Configuration.CustomerConfigurationID}}">Edit</a>  
+
+         </td> 
+    </tr>
+  <!-- </li> -->
+</table>
+<!-- </ul> -->

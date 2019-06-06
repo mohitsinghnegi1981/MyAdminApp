@@ -1,0 +1,44 @@
+<p>
+  configdetail works!
+</p>
+  <table border="1" *ngFor="let configdet of configdet$" cellpadding="1" cellspacing="1" width="600px"> 
+   <!-- <li *ngFor="let configdet of configdet$"> -->
+    <tr>
+        <td style="width: 100px;">
+            CustomerId 
+
+        </td>
+
+        <td style="width: 100px;">
+            {{ configdet.CustomerID }}  
+        </td>
+  </tr>
+  <tr>
+      <td style="width: 100px;">
+          Configuration Name 
+      </td>
+      <td style="width: 300px;">
+        <input type="text" value="{{ configdet.ConfigurationName }}" ngModel >
+          
+        </td>
+  </tr>
+  <tr>
+      <td style="width: 100px;">
+          Configuration Name 
+      </td>
+        <td style="width: 100px;">
+          <input type="text" value="{{ configdet.ConfigurationValue }}" ngModel>
+            
+        </td>
+        <!-- <td >
+         <a href="/configdetail/{{configdet.CustomerConfigurationID}}" > Edit</a>  
+      </td> -->
+    </tr>
+
+
+  <!----</li>-->
+</table>
+<div>
+  <input type="button" value="Update" onsubmit="updateConfig()" >
+
+</div>
